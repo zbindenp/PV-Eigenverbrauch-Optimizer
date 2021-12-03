@@ -1,9 +1,10 @@
 <div style="width:1000px">
-Stunde {{hour}}, {{yield}}Wh yield, {{consumption}}Wh consumption<br>
-<mat-progress-bar [ngStyle]="barWidth()"
-    class="progressbar"
-    [color]="progressbarColor()"
-    mode="determinate"
-    [value]="progressWidth()">
-</mat-progress-bar>
+    <mat-card>
+        Stunde {{hour}}, {{yield}}Wh yield, {{consumption}}Wh consumption<br>
+        <mat-progress-bar class="progressbar" mode="determinate" 
+            [ngStyle]="barWidth()" 
+            [color]="progressbarColor()"
+            [value]="progressWidth()">
+        </mat-progress-bar>
+    </mat-card>
 </div>
