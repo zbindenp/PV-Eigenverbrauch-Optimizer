@@ -9,14 +9,14 @@ export class HourComponent implements OnInit {
   @Input() hour: number;
   @Input() yield: number;
   @Input() consumption: number;
-  @Input() maxValue: number;
+  @Input() maxDayValue: number;
   
 
   constructor() {
     this.hour = -1;
     this.yield = 0;
     this.consumption=0;
-    this.maxValue=0;
+    this.maxDayValue=0;
    }
 
   ngOnInit(): void {
@@ -28,8 +28,7 @@ export class HourComponent implements OnInit {
 
   barWidth() {
     const maxVal = Math.max( this.yield, this.consumption);
-    const percent = maxVal / this.maxValue *100;
-    console.log(percent);
+    const percent = maxVal / this.maxDayValue *100;
     const styles = {
        'width': percent + '%'
     };
