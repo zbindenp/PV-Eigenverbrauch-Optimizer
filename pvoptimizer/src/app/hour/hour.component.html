@@ -1,14 +1,9 @@
+<div style="width:1000px">
 Stunde {{hour}}<br>
-<mat-progress-bar
+<mat-progress-bar [ngStyle]="barWidth()"
     class="progressbar"
     color="primary"
     mode="determinate"
     [value]="yield">
 </mat-progress-bar>
-<br>
-<mat-progress-bar
-    class="progressbar"
-    color="accent"
-    mode="determinate"
-[value]="consumption">
-</mat-progress-bar>
+</div>

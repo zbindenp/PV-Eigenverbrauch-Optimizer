@@ -20,4 +20,12 @@ export class HourComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  barWidth() {
+    const maxVal = Math.max( this.yield, this.consumption);
+    const styles = {
+       'width': maxVal + 'px'
+    };
+    return styles;
+ }
+
 }
