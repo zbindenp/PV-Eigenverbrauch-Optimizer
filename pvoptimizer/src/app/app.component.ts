@@ -10,18 +10,22 @@ import { HourValue } from './HourValue';
 })
 export class AppComponent {
   title = 'pvoptimizer';
+  data: HourValue[];
+  maxValue: number;
 
-  constructor(private forecastService: ForecastService){}
-
-  getMaxValue(): number {
-    let maxValue = 0;
-    this.getForecastValues().forEach((val)=> {
-      maxValue = Math.max(maxValue, val.consumption, val.yield);
-    });
-    return maxValue;
+  constructor(private forecastService: ForecastService) {
+    this.data = [];
+    this.maxValue = 0;
   }
 
-  getForecastValues(): HourValue[] {
-     return this.forecastService.get();
-   }
+  ngOnInit() {
+    console.log("init AppCOmponent");
+    this.forecastService.get().subscribe((ret: HourValue[]) => {
+      ret.forEach((val) => {
+        this.maxValue = Math.max(this.maxValue, val.consumption, val.yield);
+      });
+      this.data = ret;
+    })
+  }
+
 }

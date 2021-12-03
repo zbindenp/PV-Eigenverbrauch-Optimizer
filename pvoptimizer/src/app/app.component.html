@@ -317,8 +317,8 @@
 </div>
 
 <div class="content" role="main">
-  <div *ngFor="let obj of getForecastValues()">
-    <app-hour [hour]="obj.hour" [yield]="obj.yield" [consumption]="obj.consumption" [maxDayValue]="getMaxValue()"></app-hour><br>
+  <div *ngFor="let obj of data">
+    <app-hour [hour]="obj.hour" [yield]="obj.yield" [consumption]="obj.consumption" [maxDayValue]="maxValue"></app-hour><br>
   </div>
 
   <!-- Footer -->

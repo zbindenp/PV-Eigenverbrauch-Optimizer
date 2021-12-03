@@ -20,7 +20,6 @@ export class HourComponent implements OnInit {
   }
 
   ngOnInit(): void {
-
   }
 
   progressWidth() {

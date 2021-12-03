@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { HourValue } from './HourValue';
+import { Observable } from 'rxjs';
+import { HourValue } from './HourValue'; import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,8 +10,8 @@ export class ForecastService {
 
   constructor(private httpClient: HttpClient) { }
 
-  public get(): HourValue[] {
-    return [
+  public get(): Observable<HourValue[]> {
+    return of([
       { "hour": 0, "yield": 23, "consumption": 47 },
       { "hour": 1, "yield": 300, "consumption": 342 },
       { "hour": 2, "yield": 23, "consumption": 47 },
@@ -35,6 +36,6 @@ export class ForecastService {
       { "hour": 21, "yield": 23, "consumption": 47 },
       { "hour": 22, "yield": 23, "consumption": 47 },
       { "hour": 23, "yield": 23, "consumption": 47 },
-    ];
+    ]);
   }
 }
