@@ -7,11 +7,14 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HourComponent implements OnInit { 
   @Input() hour: number;
-  @Input() value: number;
+  @Input() yield: number;
+  @Input() consumption: number;
+  
 
   constructor() {
     this.hour = -1;
-    this.value = 0;
+    this.yield = 0;
+    this.consumption=0;
    }
 
   ngOnInit(): void {
