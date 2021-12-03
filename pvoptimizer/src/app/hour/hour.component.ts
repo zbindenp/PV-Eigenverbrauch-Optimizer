@@ -7,9 +7,11 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class HourComponent implements OnInit { 
   @Input() hour: number;
+  @Input() value: number;
 
   constructor() {
     this.hour = -1;
+    this.value = 0;
    }
 
   ngOnInit(): void {
