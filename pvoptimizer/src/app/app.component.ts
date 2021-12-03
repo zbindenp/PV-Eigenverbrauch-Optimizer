@@ -30,7 +30,7 @@ export class AppComponent {
        { "hour": 7, "yield": 67, "consumption":34},
        { "hour": 8, "yield": 23, "consumption":47},
        { "hour": 9, "yield": 67, "consumption":342},
-       { "hour": 10, "yield": 23, "consumption":47},
+       { "hour": 10, "yield": 47, "consumption":47},
        { "hour": 11, "yield": 23, "consumption":47},
        { "hour": 12, "yield": 23, "consumption":47},
        { "hour": 13, "yield": 23, "consumption":47},

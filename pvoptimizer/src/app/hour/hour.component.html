@@ -2,7 +2,7 @@
 Stunde {{hour}}<br>
 <mat-progress-bar [ngStyle]="barWidth()"
     class="progressbar"
-    color="primary"
+    [color]="progressbarColor()"
     mode="determinate"
     [value]="progressWidth()">
 </mat-progress-bar>
