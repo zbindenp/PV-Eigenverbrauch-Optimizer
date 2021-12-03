@@ -1,16 +1,14 @@
-<mat-card>
-    <mat-card-title>Hour component {{hour}}</mat-card-title>
-</mat-card>
+Stunde {{hour}}<br>
 <mat-progress-bar
-    class="example-margin"
-    color="green"
+    class="progressbar"
+    color="primary"
     mode="determinate"
     [value]="yield">
 </mat-progress-bar>
 <br>
 <mat-progress-bar
-    class="example-margin"
-    color="red"
+    class="progressbar"
+    color="accent"
     mode="determinate"
 [value]="consumption">
 </mat-progress-bar>
