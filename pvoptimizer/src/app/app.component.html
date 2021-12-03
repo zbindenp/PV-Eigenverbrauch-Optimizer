@@ -317,8 +317,9 @@
 </div>
 
 <div class="content" role="main">
-  
-  <app-hour *ngFor="let hour of hours" [hour]="hour"></app-hour>
+  <div *ngFor="let hour of hours">
+    <app-hour [hour]="hour"></app-hour><br>
+  </div>
 
   <!-- Footer -->
   <footer>
