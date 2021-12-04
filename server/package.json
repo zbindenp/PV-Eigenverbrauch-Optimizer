@@ -4,6 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "example": "node index.js",
+    "server": "node server.js",
+    "init": "npm i && cd ../pvoptimizer && npm i && cd ../server && npm run deploy-client",
+    "deploy-client": "cd ../pvoptimizer && npm run build-prod && cp -r dist/pvoptimizer ../server/client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
