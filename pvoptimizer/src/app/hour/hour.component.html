@@ -1,7 +1,7 @@
 
 <div style="width:1000px">
     <mat-card>
-        <mat-card-title>Stunde {{hour}}</mat-card-title>
+        <mat-card-title>{{hour | hoursToTime}}</mat-card-title>
         <mat-card-subtitle>{{yield}}Wh yield, {{consumption}}Wh consumption</mat-card-subtitle>
         <mat-progress-bar class="progressbar" mode="determinate" 
             [ngStyle]="barWidth()" 

@@ -7,11 +7,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { HourComponent } from './hour/hour.component';
 import { HttpClientModule } from '@angular/common/http';
+import { HoursToTimePipe } from './hours-to-time.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HourComponent
+    HourComponent,
+    HoursToTimePipe
   ],
   imports: [
     BrowserModule,
