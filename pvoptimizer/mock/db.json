@@ -1,4 +1,5 @@
-{"data":[
+{"path":{
+  "data":[
   {"hour":0,"consumption":1180,"yield":0},
   {"hour":1,"consumption":1150,"yield":0},
   {"hour":2,"consumption":1000,"yield":0},
@@ -23,5 +24,7 @@
   {"hour":21,"consumption":2030,"yield":0},
   {"hour":22,"consumption":1260,"yield":0},
   {"hour":23,"consumption":1110,"yield":0}
-  ]
+  ],
+  "tip":"Die Wäsche sollte anstelle um 10Uhr um 11Uhr gewaschen werden"
+}
 }
