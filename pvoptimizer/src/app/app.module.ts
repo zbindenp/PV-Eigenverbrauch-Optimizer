@@ -7,6 +7,10 @@ import { MatCardModule } from '@angular/material/card';
 import { MatIconModule } from '@angular/material/icon';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatButtonModule } from '@angular/material/button';
+
+import { MatExpansionModule } from '@angular/material/expansion';
+
 import { HourComponent } from './hour/hour.component';
 import { HttpClientModule } from '@angular/common/http';
 import { HoursToTimePipe } from './hours-to-time.pipe';
@@ -25,6 +29,8 @@ import { HoursToTimePipe } from './hours-to-time.pipe';
     HttpClientModule,
     MatIconModule,
     MatBadgeModule,
+    MatExpansionModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent],

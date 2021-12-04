@@ -1,9 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { max } from 'rxjs';
 import { Device } from './device';
 import { ForecastService } from './forecast.service';
 import { HourValue } from './HourValue';
 import { OptimizationData } from './optimization-data';
+import { MatAccordion } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +16,12 @@ export class AppComponent {
   data: HourValue[];
   maxValue: number;
   tip?: string;
+<<<<<<< Updated upstream
   devices: Device[];
+=======
+  @ViewChild(MatAccordion)
+  accordion: MatAccordion = new MatAccordion;
+>>>>>>> Stashed changes
 
   constructor(private forecastService: ForecastService) {
     this.data = [];
