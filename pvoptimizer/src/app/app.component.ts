@@ -16,12 +16,9 @@ export class AppComponent {
   data: HourValue[];
   maxValue: number;
   tip?: string;
-<<<<<<< Updated upstream
   devices: Device[];
-=======
   @ViewChild(MatAccordion)
   accordion: MatAccordion = new MatAccordion;
->>>>>>> Stashed changes
 
   constructor(private forecastService: ForecastService) {
     this.data = [];
