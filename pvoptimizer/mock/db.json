@@ -9,7 +9,7 @@
   {"hour":7,"consumption":980,"yield":0},
   {"hour":8,"consumption":1040,"yield":0},
   {"hour":9,"consumption":950,"yield":1000},
-  {"hour":10,"consumption":1050,"yield":2000},
+  {"hour":10,"consumption":2000,"yield":1050},
   {"hour":11,"consumption":1020,"yield":3000},
   {"hour":12,"consumption":1070,"yield":5000},
   {"hour":13,"consumption":970,"yield":8000},
@@ -22,6 +22,6 @@
   {"hour":20,"consumption":2140,"yield":0},
   {"hour":21,"consumption":2030,"yield":0},
   {"hour":22,"consumption":1260,"yield":0},
-  {"hour":23,"consumption":1110,"yield":0}  
+  {"hour":23,"consumption":1110,"yield":0}
   ]
 }
