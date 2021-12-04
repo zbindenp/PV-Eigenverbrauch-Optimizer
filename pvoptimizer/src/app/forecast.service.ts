@@ -12,6 +12,6 @@ export class ForecastService {
   constructor(private httpClient: HttpClient) { }
 
   public get(): Observable<OptimizationData> {
-    return this.httpClient.get<OptimizationData>( '/api/mockdata');
+    return this.httpClient.get<OptimizationData>( '/api/forecast');
   }
 }

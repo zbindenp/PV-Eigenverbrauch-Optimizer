@@ -7,7 +7,7 @@
     "example": "node index.js",
     "server": "node server.js",
     "init": "npm i && cd ../pvoptimizer && npm i && cd ../server && npm run deploy-client",
-    "deploy-client": "cd ../pvoptimizer && npm run build-prod && cp -r dist/pvoptimizer ../server/client",
+    "deploy-client": "rm -rf client && cd ../pvoptimizer && npm run build-prod && cp -r dist/pvoptimizer ../server/client",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -15,6 +15,8 @@
   "dependencies": {
     "@azure/ai-anomaly-detector": "^3.0.0-beta.3",
     "@azure/ms-rest-js": "^2.6.0",
-    "csv-parse": "^5.0.3"
+    "csv-parse": "^5.0.3",
+    "lodash": "^4.17.21",
+    "node-fetch": "^2.0.0"
   }
 }

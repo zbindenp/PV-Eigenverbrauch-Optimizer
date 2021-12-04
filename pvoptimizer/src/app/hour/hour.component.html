@@ -4,8 +4,9 @@
             <mat-panel-title> {{hour | hoursToTime}}</mat-panel-title>
             <mat-panel-description>
                 {{yield}}Wh yield, {{consumption}}Wh consumption
+                <mat-icon style="float:right" *ngIf="yield < consumption && hour!==10" color="accent">brightness_high</mat-icon>
+                <mat-icon style="float:right" *ngIf="yield >= consumption && hour!==10" color="primary">brightness_high</mat-icon>
                 <mat-icon style="float:right" *ngIf="hour===10" color="warn">brightness_high</mat-icon>
-                <mat-icon style="float:right" *ngIf="hour!==10" color="accent">brightness_high</mat-icon>
             </mat-panel-description>
         </mat-expansion-panel-header>
         <mat-progress-bar class="progressbar" mode="determinate" [ngStyle]="barWidth()" color="primary"
