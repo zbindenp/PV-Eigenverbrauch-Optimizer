@@ -13,5 +13,6 @@
             color="warn"
             [value]="progressWidthConsumption()">
         </mat-progress-bar>
+        <div *ngFor="let device of devices">{{device.name}}: {{device.consumption}}Wh</div>
     </mat-card>
 </div>

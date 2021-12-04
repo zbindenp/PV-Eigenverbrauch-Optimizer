@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Device } from '../device';
 
 @Component({
   selector: 'app-hour',
@@ -8,8 +9,9 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HourComponent implements OnInit {
   @Input() hour: number;
   @Input() yield: number;
-  @Input() consumption: number;
+  consumption: number;
   @Input() maxDayValue: number;
+  @Input() devices: Device[];
 
 
   constructor() {
@@ -17,9 +19,13 @@ export class HourComponent implements OnInit {
     this.yield = 0;
     this.consumption = 0;
     this.maxDayValue = 0;
+    this.devices = [];
   }
 
   ngOnInit(): void {
+    this.devices.forEach((dev) => {
+      this.consumption = this.consumption + dev.consumption;
+    });
   }
 
   progressWidthYield() {

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { max } from 'rxjs';
+import { Device } from './device';
 import { ForecastService } from './forecast.service';
 import { HourValue } from './HourValue';
 import { OptimizationData } from './optimization-data';
@@ -14,18 +15,24 @@ export class AppComponent {
   data: HourValue[];
   maxValue: number;
   tip?: string;
+  devices: Device[];
 
   constructor(private forecastService: ForecastService) {
     this.data = [];
     this.maxValue = 0;
     this.tip = '';
+    this.devices = [];
   }
 
   ngOnInit() {
     console.log("init AppComponent");
     this.forecastService.get().subscribe((ret: OptimizationData) => {
       ret.data.forEach((val) => {
-        this.maxValue = Math.max(this.maxValue, val.consumption, val.yield);
+        let sumConsumptions: number = 0;
+        val.devices.forEach((dev) => {
+          sumConsumptions = sumConsumptions + dev.consumption;
+        });
+        this.maxValue = Math.max(this.maxValue, sumConsumptions, val.yield);
       });
       this.data = ret.data;
       this.tip = ret.tip;
