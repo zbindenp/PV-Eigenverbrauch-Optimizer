@@ -13,10 +13,12 @@ export class AppComponent {
   title = 'pvoptimizer';
   data: HourValue[];
   maxValue: number;
+  tip: string;
 
   constructor(private forecastService: ForecastService) {
     this.data = [];
     this.maxValue = 0;
+    this.tip = '';
   }
 
   ngOnInit() {
@@ -26,6 +28,7 @@ export class AppComponent {
         this.maxValue = Math.max(this.maxValue, val.consumption, val.yield);
       });
       this.data = ret.data;
+      this.tip = ret.tip;
     })
   }
 

@@ -317,6 +317,10 @@
 </div>
 
 <div class="content" role="main">
+  <mat-card>
+      <mat-card-title>Tip</mat-card-title>
+      <mat-card-subtitle>{{tip}}</mat-card-subtitle>
+  </mat-card>
   <div *ngFor="let obj of data">
     <app-hour [hour]="obj.hour" [yield]="obj.yield" [consumption]="obj.consumption" [maxDayValue]="maxValue"></app-hour><br>
   </div>
