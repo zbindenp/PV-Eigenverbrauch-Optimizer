@@ -13,7 +13,7 @@ export class AppComponent {
   title = 'pvoptimizer';
   data: HourValue[];
   maxValue: number;
-  tip: string;
+  tip?: string;
 
   constructor(private forecastService: ForecastService) {
     this.data = [];

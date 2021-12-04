@@ -317,7 +317,7 @@
 </div>
 
 <div class="content" role="main">
-  <mat-card>
+  <mat-card *ngIf="tip">
       <mat-card-title>Tip</mat-card-title>
       <mat-card-subtitle>{{tip}}</mat-card-subtitle>
   </mat-card>
