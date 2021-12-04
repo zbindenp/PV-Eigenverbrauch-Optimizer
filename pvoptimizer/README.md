@@ -3,7 +3,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
 
 ## Json server
-Run `json-server --watch mock/db.json`
+Run `json-server --watch mock/db.json--routes mock/routes.json`
 
 ## Development server
 
