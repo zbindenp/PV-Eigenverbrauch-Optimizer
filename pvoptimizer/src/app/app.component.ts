@@ -19,7 +19,7 @@ export class AppComponent {
   }
 
   ngOnInit() {
-    console.log("init AppCOmponent");
+    console.log("init AppComponent");
     this.forecastService.get().subscribe((ret: HourValue[]) => {
       ret.forEach((val) => {
         this.maxValue = Math.max(this.maxValue, val.consumption, val.yield);

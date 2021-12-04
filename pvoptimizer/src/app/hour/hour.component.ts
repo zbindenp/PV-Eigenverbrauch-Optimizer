@@ -22,29 +22,23 @@ export class HourComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  progressWidth() {
-    return Math.min(this.consumption, this.yield) / Math.max(this.yield, this.consumption) * 100;
+  progressWidthYield() {
+    return this.yield / this.maxValueYieldOrConsumption() * 100;
+  }
+
+  private maxValueYieldOrConsumption() {
+    return Math.max(this.yield, this.consumption);
+  }
+
+  progressWidthConsumption() {
+    return this.consumption / Math.max(this.yield, this.consumption) * 100;
   }
 
   barWidth() {
-    const maxVal = Math.max(this.yield, this.consumption);
-    const percent = maxVal / this.maxDayValue * 100;
-    const styles = {
+    const percent = Math.max(this.yield, this.consumption) / this.maxDayValue * 100;
+    return {
       'width': percent + '%',
-      'background-color': 'red',
-      'color': 'red',
     };
-    return styles;
-  }
-
-  progressbarColor() {
-    if (this.consumption == this.yield) {
-      return 'accent';
-    }
-    if (this.consumption > this.yield) {
-      return 'warn';
-    }
-    return 'primary';
   }
 
 }
