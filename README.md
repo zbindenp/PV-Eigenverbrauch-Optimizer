@@ -2,7 +2,7 @@
 
 ## How to start
 - ```cd server```
-- ```npm init```
+- ```npm run init```
 - ```npm run server```
 
 ## How to develop client
