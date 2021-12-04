@@ -37,6 +37,10 @@ async function getForecastMapped() {
       sum = 0;
     }
   }
+  mappedData.data[10].devices.push({
+    name: "Waschmaschine",
+    consumption: 600
+  });
   mappedData.tip = "Die Wäsche sollte anstelle um 10Uhr um 11Uhr gewaschen werden";
   return mappedData;
 }
