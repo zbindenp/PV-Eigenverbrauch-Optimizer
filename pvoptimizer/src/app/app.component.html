@@ -371,23 +371,13 @@
   <div style="width: 1000px">
     <mat-accordion class="example-headers-align" multi>
       <div *ngFor="let obj of data">
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title> {{obj.hour | hoursToTime}}</mat-panel-title>
-            <mat-panel-description>
-              yield: {{obj.yield}}Wh
-              <mat-icon *ngIf="obj.hour===10" color="warn">brightness_high</mat-icon>
-              <mat-icon *ngIf="obj.hour!==10" color="accent">brightness_high</mat-icon>
-            </mat-panel-description>
-          </mat-expansion-panel-header>
           <app-hour
             [hour]="obj.hour"
             [yield]="obj.yield"
             [maxDayValue]="maxValue"
             [devices]="obj.devices"
           ></app-hour>
-        </mat-expansion-panel>
-        <br />
+          <br />
       </div>
 
     </mat-accordion>

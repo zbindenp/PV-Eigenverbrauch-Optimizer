@@ -1,18 +1,19 @@
-
-<div style="width:1000px">
-    <mat-card>
-        <mat-card-title>{{hour | hoursToTime}}</mat-card-title>
-        <mat-card-subtitle>{{yield}}Wh yield, {{consumption}}Wh consumption</mat-card-subtitle>
-        <mat-progress-bar class="progressbar" mode="determinate" 
-            [ngStyle]="barWidth()" 
-            color="primary"
+<div>
+    <mat-expansion-panel>
+        <mat-expansion-panel-header>
+            <mat-panel-title> {{hour | hoursToTime}}</mat-panel-title>
+            <mat-panel-description>
+                {{yield}}Wh yield, {{consumption}}Wh consumption
+                <mat-icon style="float:right" *ngIf="hour===10" color="warn">brightness_high</mat-icon>
+                <mat-icon style="float:right" *ngIf="hour!==10" color="accent">brightness_high</mat-icon>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <mat-progress-bar class="progressbar" mode="determinate" [ngStyle]="barWidth()" color="primary"
             [value]="progressWidthYield()">
         </mat-progress-bar>
-        <mat-progress-bar class="progressbar" mode="determinate" 
-            [ngStyle]="barWidth()" 
-            color="warn"
+        <mat-progress-bar class="progressbar" mode="determinate" [ngStyle]="barWidth()" color="warn"
             [value]="progressWidthConsumption()">
         </mat-progress-bar>
         <div *ngFor="let device of devices">{{device.name}}: {{device.consumption}}Wh</div>
-    </mat-card>
+    </mat-expansion-panel>
 </div>
